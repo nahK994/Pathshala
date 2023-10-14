@@ -1,0 +1,106 @@
+{
+    "role": {
+        "admin": {
+            "permissions": {                
+                "course": [
+                    "Onboard teacher",
+                    "Create course",
+                    "Assign course to teacher",
+                    "Review course",
+                    "Announce course",
+                    "Hide course",
+                    "Delete course",
+                    "Give feedback on course",
+                    "Verify fake feedbacks"
+                ],
+                "exam": [
+                    "Declear model test",
+                    "Assign teacher for model test",
+                    "Review model test",
+                    "Abandon model test",
+                    "Announce model test",
+                    "Remove particular question",
+                    "Request to review particular question",
+                    "Verify fake feedbacks"
+                ],
+                "other": [
+                    "Create another admin"
+                ]
+            }
+        },
+        "student": {
+            "permissions": {
+                "course": [
+                    "Can enroll course",
+                    "Attend lectures",
+                    "Participate mock exam",
+                    "Give star rating",
+                    "Give feedback after completing course",
+                    "Participate QnA"
+                ],
+                "exam": [
+                    "Get notification of model test announcment",
+                    "Participate model test",
+                    "See rank list",
+                    "See own result",
+                    "Can participate previous exam",
+                    "Can archive questions",
+                    "Remove archived question",
+                    "Give feedback on exam",
+                    "Give feedback on question",
+                    "Get certificate"
+                ]
+            }
+        },
+        "teacher": {
+            "permissions": {
+                "course": [
+                    "Create lecture to specific course",
+                    "Reorder lecture",
+                    "Create handnotes to specific lecture",
+                    "Create handnoted to specific course",
+                    "Create exam questions and answers",
+                    "Request admin to review course",
+                    "Report fake feedback",
+                    "Participate QnA"
+                ],
+                "exam": [
+                    "Create syllabus for model test",
+                    "Prepare question paper and answer",
+                    "Prepare handnote for model test",
+                    "Request admin to review model test",
+                    "Report fake feedback",
+                    "Update question and answer"
+                ]
+            }
+        }
+    }
+}
+
+
+{
+    "states": [
+        "course": ["Created", "TeacherAsssigned", "Preparing", "Reviewing", "Announced", "Hide"],
+        "modelTest": ["Created", "TeacherAsssigned", "Preparing", "Reviewing", "Announced", "Hide"],
+        "modelTest": ["Created", "TeacherAsssigned", "Preparing", "Reviewing", "Announced", "Hide"],
+        "teacher": ["TeacherInvitationSent", "Approved", "Suspended", "Retired", "OnVacation"],
+        "teacherActivationLog": ["Blacklisted", "Completed", "Rejected"],
+        "courseFeedback": ["review", "fake", "default"]
+    ]
+}
+
+{
+    "courseType": ["preparation", "training"]
+}
+
+{
+    "services": [
+        "registration",
+        "email",
+        "identity/auth",
+        "storage ---> file upload, download, delete",
+        "course",
+        "exam ---> result create, certificate generation",
+        "notification"
+    ]
+}
