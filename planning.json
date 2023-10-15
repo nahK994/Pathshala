@@ -1,5 +1,5 @@
 {
-    "role": {
+    "role-permission": {
         "admin": {
             "permissions": {                
                 "course": [
@@ -74,26 +74,15 @@
                 ]
             }
         }
-    }
-}
-
-
-{
-    "states": [
+    },
+    "states": {
         "course": ["Created", "TeacherAsssigned", "Preparing", "Reviewing", "Announced", "Hide"],
-        "modelTest": ["Created", "TeacherAsssigned", "Preparing", "Reviewing", "Announced", "Hide"],
         "modelTest": ["Created", "TeacherAsssigned", "Preparing", "Reviewing", "Announced", "Hide"],
         "teacher": ["TeacherInvitationSent", "Approved", "Suspended", "Retired", "OnVacation"],
         "teacherActivationLog": ["Blacklisted", "Completed", "Rejected"],
         "courseFeedback": ["review", "fake", "default"]
-    ]
-}
-
-{
-    "courseType": ["preparation", "training"]
-}
-
-{
+    },
+    "courseType": ["preparation", "training"],
     "services": [
         "registration",
         "email",
