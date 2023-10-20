@@ -1,0 +1,10 @@
+version: '3'
+services:
+  
+  mail_service:
+    container_name: mail_service
+    build: Backend/mail
+    restart: always
+    ports:
+      - 8001:8000
+    command: bash -c "python3 script.py"
