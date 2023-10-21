@@ -8,3 +8,14 @@ services:
     ports:
       - 8001:8000
     command: bash -c "python3 script.py"
+
+  user_db:
+    container_name: user_db
+    image: postgres
+    restart: always
+    ports:
+      - 5001:5432
+    environment:
+      - POSTGRES_USER=skhan
+      - POSTGRES_PASSWORD=haha
+      - POSTGRES_DB=user_db
