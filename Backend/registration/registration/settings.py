@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'student',
     'teacher',
+    'admin',
     'rest_framework',
     'rest_framework_swagger',
     'corsheaders'

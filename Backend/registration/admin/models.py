@@ -1,9 +1,8 @@
 from utils.userModel import *
 
-class Teacher(User):
+class Admin(User):
     phone = models.CharField()
-    headline = models.CharFields()
     bio = models.TextField(default='')
 
     class Meta:
-        db_table = 'teachers'
+        db_table = 'admins'
