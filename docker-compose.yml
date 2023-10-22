@@ -9,6 +9,16 @@ services:
   #     - 8001:8000
   #   command: bash -c "python3 script.py"
 
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
   user_db:
     container_name: user_db
     image: postgres
@@ -19,3 +29,8 @@ services:
       - POSTGRES_USER=skhan
       - POSTGRES_PASSWORD=haha
       - POSTGRES_DB=user_db
+
+
+networks:
+  default:
+    driver: bridge
