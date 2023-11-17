@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Redirect } from 'react-router-dom'
 import LanddingPage from '../views/landing-page/landing-page'
 import TeacherRegistration from '../views/registration/teacher-registration';
 import StudentRegistration from '../views/registration/student-registration';
@@ -16,7 +16,8 @@ function RouterConfig() {
             <Route path='teacher' Component={TeacherRegistration}></Route>
             <Route path='student' Component={StudentRegistration}></Route>
           </Route>
-          <Route path='*' Component={PageNotFound} />
+          <Route path='/404' Component={PageNotFound} />
+          <Redirect from="*" to={"/404"} />
         </Routes>
       </BrowserRouter>
     </>
